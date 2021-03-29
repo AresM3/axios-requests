@@ -48,4 +48,15 @@ export class AxiosRequest {
                 .finally(() => observer.complete());
         });
     }
+
+    public static postBlob(url: string, data: any, config?: AxiosRequestConfig): Observable<Blob>{
+        if(!!config) config.responseType = "blob";
+        else config = {responseType: "blob"};
+        return new Observable<Blob>(observer => {
+            axios.post(url, data, config)
+                .then(response => observer.next(response.data))
+                .catch(error => observer.error(error))
+                .finally(() => observer.complete());
+        })
+    }
 }
