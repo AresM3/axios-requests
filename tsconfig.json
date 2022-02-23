@@ -4,7 +4,7 @@
     "target": "es2015",
     "sourceMap": true,
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "./dist",
     "strict": true,
     "lib": ["es2018", "dom"],
     "moduleResolution": "node"
