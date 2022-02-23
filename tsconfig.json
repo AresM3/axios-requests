@@ -7,8 +7,9 @@
     "outDir": "./dist",
     "strict": true,
     "lib": ["es2018", "dom"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules"],
-  "include": ["src"]
+  "include": ["./package.json"]
 }
