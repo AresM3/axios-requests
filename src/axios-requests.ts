@@ -5,7 +5,7 @@ export class AxiosRequest {
     public static get<T>(url: string, config?: AxiosRequestConfig): Observable<T> {
         return new Observable<T>(observer => {
             axios.get(url, config)
-                .then(response => observer.next(response.data.success))
+                .then(response => observer.next(response.data))
                 .catch(error => observer.error(error))
                 .finally(() => observer.complete());
         });
@@ -14,7 +14,7 @@ export class AxiosRequest {
     public static post<T>(url: string, data: any, config?: AxiosRequestConfig): Observable<T> {
         return new Observable<T>(observer => {
             axios.post(url, data, config)
-                .then(response => observer.next(response.data.success))
+                .then(response => observer.next(response.data))
                 .catch(error => observer.error(error))
                 .finally(() => observer.complete());
         });
@@ -23,7 +23,7 @@ export class AxiosRequest {
     public static put<T>(url: string, data: any, config?: AxiosRequestConfig): Observable<T> {
         return new Observable<T>(observer => {
             axios.put(url, data, config)
-                .then(response => observer.next(response.data.success))
+                .then(response => observer.next(response.data))
                 .catch(error => observer.error(error))
                 .finally(() => observer.complete());
         });
@@ -32,7 +32,7 @@ export class AxiosRequest {
     public static delete<T>(url: string, config?: AxiosRequestConfig): Observable<T> {
         return new Observable<T>(observer => {
             axios.delete(url, config)
-                .then(response => observer.next(response.data.success))
+                .then(response => observer.next(response.data))
                 .catch(error => observer.error(error))
                 .finally(() => observer.complete());
         });

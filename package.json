@@ -1,6 +1,6 @@
 {
   "name": "@aresm3/axios-requests",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.ts",
   "dependencies": {
     "axios": "^0.21.1",
