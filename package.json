@@ -1,17 +1,21 @@
 {
   "name": "@aresm3/axios-requests",
   "version": "1.0.1",
-  "peerDependencies": {},
+  "main": "index.ts",
   "dependencies": {
     "axios": "^0.21.1",
     "rxjs": "^6.6.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^4.2.3"
   },
   "scripts": {
-    "build": "tsc",
-    "pub": "cd dist & npm publish"
+    "build": "gulp",
+    "pub": "cd dist & npm publish",
+    "build-pub": "npm run build && npm run pub"
   }
 }
